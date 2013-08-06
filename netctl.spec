@@ -1,11 +1,11 @@
 Summary:	Profile based systemd network management
 Name:		netctl
-Version:	1.2
-Release:	3
+Version:	1.3
+Release:	1
 License:	GPL/GPL v2/LGPL/BSD/BSD-like/other license name here)
 Group:		Base
 Source0:	https://projects.archlinux.org/netctl.git/snapshot/%{name}-%{version}.tar.gz
-# Source0-md5:	697f5c1a386d04506784dda4a8b1a781
+# Source0-md5:	9190abd18191b5e3cb7775130ffb3009
 BuildRequires:	asciidoc
 Requires:	coreutils
 Requires:	iproute2
