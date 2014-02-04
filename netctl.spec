@@ -1,11 +1,11 @@
 Summary:	Profile based systemd network management
 Name:		netctl
-Version:	1.3
+Version:	1.4
 Release:	1
 License:	GPL/GPL v2/LGPL/BSD/BSD-like/other license name here)
 Group:		Base
 Source0:	https://projects.archlinux.org/netctl.git/snapshot/%{name}-%{version}.tar.gz
-# Source0-md5:	9190abd18191b5e3cb7775130ffb3009
+# Source0-md5:	1668ae20841be01edc0ab7b96ccabee3
 BuildRequires:	asciidoc
 Requires:	coreutils
 Requires:	iproute2
@@ -54,8 +54,10 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_prefix}/lib/network/connections
 %attr(755,root,root) %{_prefix}/lib/network/auto.action
 %attr(755,root,root) %{_prefix}/lib/network/network
+%{_prefix}/lib/network/connections/README
 %{_prefix}/lib/network/connections/bond
 %{_prefix}/lib/network/connections/bridge
+%{_prefix}/lib/network/connections/dummy
 %{_prefix}/lib/network/connections/ethernet
 %{_prefix}/lib/network/connections/mobile_ppp
 %{_prefix}/lib/network/connections/pppoe
@@ -73,6 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 %{systemdunitdir}/netctl-sleep.service
 %{systemdunitdir}/netctl-auto@.service
 
+%{_mandir}/man1/netctl-auto.1*
 %{_mandir}/man1/netctl.1*
 %{_mandir}/man5/netctl.profile.5*
 %{_mandir}/man7/netctl.special.7*
